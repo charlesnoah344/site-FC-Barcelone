@@ -16,7 +16,9 @@ header
  display: flex;
  justify-content: space-between;
  align-items: flex-end;
-  background-color: pink;
+ background-color: pink;
+ padding: 30px;
+ border-bottom: solid 2px #760001;
 }
 #en-tete
 {
@@ -75,8 +77,12 @@ nav a:hover
  border-bottom: 3px solid #760001; 
  }
  .stade {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 100px;
+    width: 100%;
+    margin: 0;
+    padding: 0;
     }
+.stade img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
