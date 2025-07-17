@@ -9,18 +9,23 @@
 </head>
 <body>
     <header>
-        <h1>Bienvenue sur mon site du FC Barcelone</h1>
-        <img src="logo barça.png" alt="Logo du FC Barcelone" height="100" width="100">
-        <nav>
-            <ul>
-                <li><a href="accueil.html">Accueil</a></li>
-                <li><a href="https://store.fcbarcelona.com/fr/?" target="_blank">Boutique</a></li>
-                <li><a href="https://www.fcbarcelona.fr/fr/" target="_blank">Site officiel</a></li>
-                <li><a href="contact.html" target="_blank">Contact</a></li>
-            </ul>
-        </nav>
+        <h1>Bienvenue sur le site du FC Barcelone</h1>
+        <div id="en-tete">
+            <div class="logo">
+                <img src="data:image/png;base64,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" 
+                alt="Logo du FC Barcelone" />
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="accueil.html">Accueil</a></li>
+                    <li><a href="https://store.fcbarcelona.com/fr/?" target="_blank">Boutique</a></li>
+                    <li><a href="https://www.fcbarcelona.fr/fr/" target="_blank">Site officiel</a></li>
+                    <li><a href="contact.html" target="_blank">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
-    <div class="image du stade">
+    <div class="stade">
         <figure>
             <img src="https://www.fcbarcelona.com/photo-resources/2021/10/15/632a39ea-15b8-4526-928d-9b76a4f42028/Campus-A-ria_1.jpg?width=862&height=538" alt="Future Spotify Camp Nou" />
         </figure>
