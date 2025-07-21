@@ -1,4 +1,5 @@
-*{
+
+* {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
@@ -7,118 +8,185 @@
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
-    color: #f8f4e6;
-    background-image: url("bg\ barça.png");
+    color: #222;
+    background-color: #f5f6fa;
+    background-image: url("bg\\ barça.png");
+    background-size: cover;
+    background-attachment: fixed;
 }
-header
-{
 
- display: flex;
- justify-content: space-between;
- align-items: flex-end;
- background-color: #004D98;
- padding: 30px;
- border-bottom: solid 2px #760001;
- color: black;
+header {
+    display: flex;
+    flex-direction: column;
+    background-color: #004D98;
+    padding: 30px 20px 10px 20px;
+    border-bottom: solid 2px #760001;
+    color: #fff;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    border-radius: 0 0 16px 16px;
 }
-#en-tete
-{
- display: flex;
- flex-direction: row;
- justify-content: space-between;
- margin-left: auto;
 
+#en-tete {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
 }
-.logo{
-    display:flex;
-    flex-direction :row;
-    align-items: baseline;
+
+.logo {
+    display: flex;
+    align-items: center;
 }
+
 .logo img {
     height: 60px;
     width: 60px;
     margin-right: 20px;
+    border-radius: 50%;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.12);
 }
-header h1
-{
- font-family: 'BallparkWeiner', serif;
- font-size: 2.5em;
- font-weight: normal;
- margin: 0 0 0 10px;
+
+header h1 {
+    font-family: 'BallparkWeiner', serif;
+    font-size: 2.5em;
+    font-weight: normal;
+    margin: 0 0 0 10px;
+    letter-spacing: 2px;
 }
-header h2
-{
- font-family: Dayrom, serif;
- font-size: 1.1em;
- margin-top: 0px;
- font-weight: normal;
+
+header h2 {
+    font-family: Dayrom, serif;
+    font-size: 1.1em;
+    margin-top: 0px;
+    font-weight: normal;
 }
+
 nav {
     margin-left: auto;
 }
-nav ul
-{
- list-style-type: none;
- display: flex;
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    gap: 10px;
 }
-nav li
-{
- margin-right: 15px;
+
+nav li {
+    margin-right: 15px;
 }
-nav a
-{
- font-size: 1.3em;
- color: #181818;
- padding-bottom: 3px;
- text-decoration: none;
+
+nav a {
+    font-size: 1.1em;
+    color: #f8f4e6;
+    background: #760001;
+    padding: 8px 16px;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: background 0.2s, color 0.2s;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.07);
 }
-nav a:hover
-{
- color: #760001;
- border-bottom: 3px solid #760001; 
- }
- .stade {
+
+nav a:hover {
+    color: #004D98;
+    background: #f8f4e6;
+    border-bottom: none;
+}
+
+.stade {
     width: 100%;
     margin: 0;
     padding: 0;
-    }
+}
+
 .stade img {
     width: 100%;
-    height: 500px;
+    max-height: 700px;
+    object-fit: cover;
     display: block;
+    border-radius: 16px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.10);
 }
+
 .stade figcaption {
     text-align: center;
     font-size: 1.2em;
     margin-top: 10px;
-    color: white;
+    color: #004D98;
+    font-weight: bold;
 }
 
+.presentation {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+    padding: 20px;
+    gap: 30px;
+    box-sizing: border-box;
+}
+
+article, aside {
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+    padding: 20px;
+    text-align: justify;
+}
 
 article {
-    width: 45%;
-    height: auto;
-    margin-left: 0;
-    padding: 20px;
-    box-sizing: border-box;
-    text-align: justify;
+    width: 60%;
 }
 
 aside {
     width: 35%;
-    height: auto;
-    margin-left: auto;
-    padding: 40px;
-    box-sizing: border-box;
-    text-align: justify;
-    
 }
+
+.joueurs {
+    background: #f8f4e6;
+    border-radius: 12px;
+    margin: 30px 20px;
+    padding: 20px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+}
+
+.joueurs h2 {
+    color: #004D98;
+    margin-bottom: 10px;
+}
+
+.joueurs ul {
+    list-style: disc inside;
+}
+
+.joueurs li {
+    margin-bottom: 8px;
+}
+
 footer {
-    background-color:#A50044;
-    color: black;
+    background-color: #A50044;
+    color: #f8f4e6;
     text-align: center;
-    padding: 40px;
+    padding: 40px 10px 20px 10px;
+    border-radius: 16px 16px 0 0;
+    box-shadow: 0 -2px 8px rgba(0,0,0,0.08);
     position: relative;
     bottom: 0;
     width: 100%;
+}
+
+@media (max-width: 900px) {
+    .presentation {
+        flex-direction: column;
+        gap: 20px;
+    }
+    article, aside {
+        width: 100%;
+    }
+    .joueurs {
+        margin: 20px 5px;
+    }
+    header {
+        padding: 20px 5px 10px 5px;
+    }
 }
